@@ -43,8 +43,8 @@ public class Main {
 
         while (!action.equals("exit")) {
 
-            if (!action.equals("quit")) {
-                while (action.equals("buy")) {
+            while (!action.equals("quit")) {
+                if (action.equals("buy")) {
                     System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, " +
                             "back - to main menu:");
                     String buyChoice = sc.nextLine();
@@ -117,8 +117,7 @@ public class Main {
                         break;
                     }
                 }
-
-                while (action.equals("fill")){
+                else if (action.equals("fill")){
                     System.out.println("Write how many ml of water do you want to add:");
                     int addWater = sc.nextInt();
                     System.out.println("Write how many ml of milk do you want to add:");
@@ -137,6 +136,7 @@ public class Main {
                     action = sc.nextLine();
                     break;
                 }
+
             }
         }
 
